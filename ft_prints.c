@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "libftprintf.h"
 
 int	ft_prints(va_list ap)
 {
@@ -6,7 +6,7 @@ int	ft_prints(va_list ap)
 	char	*s;
 
 	s = va_arg(ap, char *);
-	ft_putstr(s, 1);
+	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
 	return (len);
 }

@@ -1,12 +1,10 @@
-#include "libft.h"
+#include "libftprintf.h"
 
-int	ft_printx(va_list ap)
+int	ft_printx(unsigned int n)
 {
 	int	len;
 	char	*hex;
-	int	n;
 
-	n = va_arg(ap, int);
 	hex = "0123456789abcdef";
 	if (n >= 16)
 		len = ft_printx(n / 16) + 1;

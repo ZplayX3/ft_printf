@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "libftprintf.h"
 
 int	ft_hub(char c, va_list ap)
 {
@@ -7,19 +7,22 @@ int	ft_hub(char c, va_list ap)
 	if (c == 's')
 		return (ft_prints(ap));
 	if (c == 'p')
+	{
 		ft_putchar_fd('0', 1);
 		ft_putchar_fd('x', 1);
-		return (ft_printp(ap) + 2);
+		return (ft_printp(va_arg(ap, unsigned long)) + 2);
+	}
 	if (c == 'd')
 		return (ft_printd(ap));
 	if (c == 'i')
 		return (ft_printi(ap));
 	if (c == 'u')
-		return (ft_printu(ap));
+		return (ft_printu(va_arg(ap, unsigned int)));
 	if (c == 'x')
-		return (ft_printx(ap));
+		return (ft_printx(va_arg(ap, unsigned int)));
 	if (c == 'X')
-		return (ft_print_caps_x(ap));
+		return (ft_print_caps_x(va_arg(ap, unsigned int)));
 	if (c == '%')
-		return (ft_print_percent(ap));
+		return (ft_print_percent());
+	return (0);
 }

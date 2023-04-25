@@ -1,12 +1,10 @@
-#include "libft.h"
+#include "libftprintf.h"
 
-int	ft_print_caps_x(va_list ap)
+int	ft_print_caps_x(unsigned int n)
 {
 	int	len;
 	char	*hex;
-	int	n;
 
-	n = va_arg(ap, int);
 	hex = "0123456789ABCDEF";
 	if (n >= 16)
 		len = ft_print_caps_x(n / 16) + 1;
