@@ -8,10 +8,10 @@ SRCS = ft_hub.c \
 	ft_printi.c \
 	ft_printu.c \
 	ft_printx.c \
-	ft_printX.c \
+	ft_print_caps_x.c \
 	ft_print_percent.c \
 
-OBJECTS = $(SRCS: .c=.o)
+OBJECTS = $(SRCS:.c=.o)
 
 CC = gcc
 
