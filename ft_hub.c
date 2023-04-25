@@ -1,9 +1,9 @@
-#include "libft/h"
+#include "libft.h"
 
 int	ft_hub(char c, va_list ap)
 {
 	if (c == 'c')
-		return(ft_printc(ap));
+		return (ft_printc(ap));
 	if (c == 's')
 		return (ft_prints(ap));
 	if (c == 'p')

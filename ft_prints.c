@@ -1,9 +1,9 @@
 #include "libft.h"
 
-int	(va_list ap)
+int	ft_prints(va_list ap)
 {
 	int	len;
-	char 	*s;
+	char	*s;
 
 	s = va_arg(ap, char *);
 	ft_putstr(s, 1);

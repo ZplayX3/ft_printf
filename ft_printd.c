@@ -6,8 +6,8 @@ int	ft_printd(va_list ap)
 	int	len;
 	int	nb;
 
-	len = 1
-	d = va_arg(ap, int)
+	len = 1;
+	d = va_arg(ap, int);
 	nb = d;
 	ft_putnbr_fd(d, 1);
 	if (nb < 0)
