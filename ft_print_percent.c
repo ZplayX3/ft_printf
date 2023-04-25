@@ -1,6 +1,7 @@
 #include "libft.h"
 
-void	ft_print_percent(va_list ap)
+int	ft_print_percent(va_list ap)
 {
 	ft_putchar_fd('%', 1);
+	return (1)
 }

@@ -1,8 +1,12 @@
 #include "libft.h"
 
-void	(va_list ap)
+int	(va_list ap)
 {
-	char *s;
+	int	len;
+	char 	*s;
+
 	s = va_arg(ap, char *);
 	ft_putstr(s, 1);
+	len = ft_strlen(s);
+	return (len);
 }
