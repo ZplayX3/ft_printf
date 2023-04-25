@@ -1,3 +1,5 @@
+#include "libft/h"
+
 int	ft_hub(char c, va_list ap)
 {
 	if (c == 'c')
@@ -5,7 +7,9 @@ int	ft_hub(char c, va_list ap)
 	if (c == 's')
 		return (ft_prints(ap));
 	if (c == 'p')
-		return (ft_printp(ap));
+		ft_putchar_fd('0', 1);
+		ft_putchar_fd('x', 1);
+		return (ft_printp(ap) + 2);
 	if (c == 'd')
 		return (ft_printd(ap));
 	if (c == 'i')
