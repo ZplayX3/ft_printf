@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printd(va_list ap)
 {
@@ -12,6 +12,8 @@ int	ft_printd(va_list ap)
 	ft_putnbr_fd(d, 1);
 	if (nb < 0)
 	{
+		if (nb == -2147483648)
+			nb += 1;
 		nb = -nb;
 		len++;
 	}

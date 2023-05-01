@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {
@@ -14,6 +14,12 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			len += ft_hub(format[i + 1], ap);
+			i++;
+		}
+		else
+		{
+			ft_putchar_fd(format[i], 1);
+			len ++;
 		}
 		i++;
 	}

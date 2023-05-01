@@ -1,10 +1,11 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_caps_x(unsigned int n)
 {
 	int	len;
 	char	*hex;
 
+	len = 1;
 	hex = "0123456789ABCDEF";
 	if (n >= 16)
 		len = ft_print_caps_x(n / 16) + 1;

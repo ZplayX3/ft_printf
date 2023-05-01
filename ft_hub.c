@@ -1,21 +1,22 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_hub(char c, va_list ap)
 {
+	unsigned long	p;
+
 	if (c == 'c')
 		return (ft_printc(ap));
 	if (c == 's')
 		return (ft_prints(ap));
 	if (c == 'p')
 	{
-		ft_putchar_fd('0', 1);
-		ft_putchar_fd('x', 1);
-		return (ft_printp(va_arg(ap, unsigned long)) + 2);
+		p = va_arg(ap, unsigned long);
+		if (p != 0)
+			ft_putstr_fd("0x", 1);
+		return (ft_printp(p) + 2 * !!p);
 	}
-	if (c == 'd')
+	if (c == 'd' || c == 'i')
 		return (ft_printd(ap));
-	if (c == 'i')
-		return (ft_printi(ap));
 	if (c == 'u')
 		return (ft_printu(va_arg(ap, unsigned int)));
 	if (c == 'x')

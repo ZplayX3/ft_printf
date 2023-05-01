@@ -5,7 +5,6 @@ SRCS = ft_hub.c \
 	ft_prints.c \
 	ft_printp.c \
 	ft_printd.c \
-	ft_printi.c \
 	ft_printu.c \
 	ft_printx.c \
 	ft_print_caps_x.c \
