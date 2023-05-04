@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:49:42 by event             #+#    #+#             */
-/*   Updated: 2023/05/04 13:49:51 by event            ###   ########.fr       */
+/*   Updated: 2023/05/04 16:21:28 by tlachman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_printp(unsigned long n)
 	hex = "0123456789abcdef";
 	if (n == 0)
 	{
-		ft_putstr_fd("(nil)", 1);
-		return (5);
+		ft_putstr_fd("0", 1);
+		return (3);
 	}
 	if (n >= 16)
 		len = ft_printp(n / 16) + 1;

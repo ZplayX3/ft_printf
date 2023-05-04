@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 13:44:14 by event             #+#    #+#             */
-/*   Updated: 2023/05/04 13:44:18 by event            ###   ########.fr       */
+/*   Updated: 2023/05/04 16:24:05 by tlachman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ int	ft_hub(char c, va_list ap)
 	if (c == 'p')
 	{
 		p = va_arg(ap, unsigned long);
-		if (p != 0)
-			ft_putstr_fd("0x", 1);
+		ft_putstr_fd("0x", 1);
 		return (ft_printp(p) + 2 * !!p);
 	}
 	if (c == 'd' || c == 'i')
